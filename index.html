@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    </head>
+    <body>
+        <h1>Task Manager 2000 Pro++</h1>
+        <ul data-bind="foreach: tasks">
+            <li>
+                <span data-bind="text: title"></span>
+                <a href="#" data-bind="click: $parent.deleteTask">(delete)</a>
+            </li>
+        </ul>
+        <input type="text" id="newtitle"/>
+        <button data-bind="click: addNew">Add</button>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/knockout/2.3.0/knockout-min.js"></script>
+        <script src="scripts/tasklistapp.js"></script>
+    </body>
+</html>
